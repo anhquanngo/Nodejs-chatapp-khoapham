@@ -1,0 +1,72 @@
+body {
+    background-color: #ebeef4;
+}
+
+#wrapper {
+    width: 800px;
+    margin: auto;
+}
+
+#txtUsername {
+    background-color: transparent;
+    border: solid 1px black;
+}
+
+#left,
+#right {
+    width: auto;
+}
+
+#left {
+    float: left;
+    background-color: #f0f2d0;
+}
+
+#right {
+    width: 70%;
+    float: right;
+    background-color: #d4f9f8;
+}
+
+#boxTitle {
+    border: solid 1px black;
+    padding: 5px;
+    text-align: center;
+}
+
+#boxContent {
+    border: solid 1px black;
+    border-top: none;
+    padding: 5px;
+    text-align: center;
+}
+
+#listMessages {
+    height: 300px;
+    background-color: burlywood;
+    margin-bottom: 15px;
+}
+
+#txtMessage {
+    background-color: transparent;
+    border: solid 1px black;
+}
+
+#sayHi {
+    text-align: right
+}
+
+#NameRoom {
+    text-align: right
+}
+
+#boxCreateRoom {
+    display: flex;
+}
+
+#boxRoom {
+    border: solid 1px black;
+    border-top: none;
+    padding: 5px;
+    text-align: center;
+}

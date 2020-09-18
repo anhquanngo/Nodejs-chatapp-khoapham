@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="layout.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <h3>WHAT'S YOUR NAME</h3>
+        <div id="loginForm">
+            <input type="text" id="txtUsername" />
+            <input type="button" value="Register" id="btnRegister" />
+        </div>
+        <div id="chatForm">
+            <div id="left">
+                <div id="boxTitle">User Online</div>
+
+                <div id="boxContent">
+
+
+                </div>
+                <div id="boxTitle">Room</div>
+                <div id="boxJoinRoom">
+                    <input type="text" id="joinRoom">
+                    <input type="button" id="btnJoinRoom" value="Join">
+                </div>
+                <div id="boxRoom">
+
+
+                </div>
+            </div>
+            <div id="right">
+                <div id="sayHi">Hello
+                    <span id="currentUser">mr.A</span>
+                    <input type="button" id="btnLogout" value="logout">
+                </div>
+                <div id="listMessages">
+                    <div id="NameRoom">
+
+                    </div>
+                </div>
+                <div id="notify"></div>
+                <input type="text" id="txtMessage">
+                <input type="button" id="btnSendMessage" value="Send">
+            </div>
+        </div>
+    </div>
+</body>
+<script src="jquery-3.5.1.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="hello.js"></script>
+
+</html>
