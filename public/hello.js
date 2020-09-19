@@ -17,14 +17,20 @@ socket.on("SERVER-SEND-MESSAGE", function (data) {
 socket.on("SERVER-SEND-LIST-USERS", function (data) {
     $("#boxContent").html("")
     data.forEach(user => {
-        $("#boxContent").append("<div class='user'>" + user + "</div>")
+        $("#boxContent").append(
+            "<p class='user' data-id='" + user + "' id='" + user + "'>" + user + "</p>"
+        )
     });
+    $("#boxContent>p").on("click", function (node) {
+        $("#NameRoom").html("Bạn đang chat với: " + $(this).attr('data-id'))
+
+    })
 })
 
 socket.on("HAVE-USER-OUT", function (data) {
     $("#boxContent").html("")
     data.forEach(user => {
-        $("#boxContent").append("<div class='user'>" + user + "</div>")
+        $("#boxContent").append("<p class='user'>" + user + "</p>")
     });
 })
 
@@ -45,6 +51,10 @@ socket.on("SERVER-SEND-ROOMS", function (data) {
 socket.on("SERVER-SEND-ROOM-SOCKET", function (data) {
     $("#NameRoom").html("")
     $("#NameRoom").append("Bạn đang ở room: " + data)
+})
+
+socket.on("SERVER-SEND-MESSAGE-ROOM", function (data) {
+    $("#listMessages").append("<div class='ms'>" + data.name + " :" + data.nd + "</div>")
 })
 
 $(document).ready(function () {
@@ -82,5 +92,6 @@ $(document).ready(function () {
     $("#btnJoinRoom").click(function () {
         socket.emit("JOIN-ROOM", $("#joinRoom").val());
     })
+
 
 })
